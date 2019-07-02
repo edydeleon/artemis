@@ -1,0 +1,2 @@
+# artemis
+A Hugo boilerplate
