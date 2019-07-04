@@ -26,6 +26,10 @@ coverage
 # Bower dependency directory (https://bower.io/)
 bower_components
 
+# Hugo Directories
+/public
+/resources
+
 # node-waf configuration
 .lock-wscript
 
@@ -59,3 +63,13 @@ typings/
 
 # next.js build output
 .next
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

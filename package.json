@@ -1,0 +1,48 @@
+{
+  "name": "artemis",
+  "version": "0.1.0",
+  "description": "A Hugo Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && run-p hugo browsersync build:dev",
+    "prod": "npm run clean && run-p hugo browsersync build:production",
+    "hugo": "hugo -w",
+    "browsersync": "gulp browsersync",
+    "clean": "gulp clean",
+    "build:dev": "gulp dev",
+    "build:production": "gulp prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edydeleon/artemis.git"
+  },
+  "keywords": [
+    "hugo",
+    "boilerplate"
+  ],
+  "author": "Edy de Leon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edydeleon/artemis/issues"
+  },
+  "homepage": "https://github.com/edydeleon/artemis#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
