@@ -1,3 +1,1 @@
-console.log('main js loaded');
-
-console.log('second');
+console.log('Hello! Edit me in assets/js/main.js');
