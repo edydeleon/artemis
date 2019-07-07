@@ -1,18 +1,17 @@
 {
   "name": "artemis",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Hugo Boilerplate",
   "main": "index.js",
   "scripts": {
     "dev": "gulp clean && run-p hugo:dev gulp:dev",
     "stage": "gulp clean && run-p hugo:stage gulp:prod",
-    "production": "gulp clean && hugo && gulp:prod",
+    "production": "gulp clean && run-s hugo:prod gulp:prod",
     "gulp:dev": "gulp --env development",
     "gulp:prod": "gulp --env production",
-    "build:dev": "run-p gulp dev",
-    "build:prod": "gulp prod",
     "hugo:dev": "hugo -w",
     "hugo:stage": "hugo -w -D -F",
+    "hugo:prod": "hugo --minify",
     "clean": "gulp clean",
     "images": "gulp images"
   },
