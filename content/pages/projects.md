@@ -1,8 +1,10 @@
 ---
-title: "Home"
+title: "Projects"
+layout: projects
 description: "This is the meta description"
 menu:
   main:
-    weight: 1
+    weight: 10
+url: "/projects"
 draft: false
 ---

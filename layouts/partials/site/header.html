@@ -1,0 +1,25 @@
+<header class="site-header" role="banner">
+  <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="{{ .Site.BaseURL }}" class="navbar-item is-size-4">Artemis</a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="mainNav">
+        <div class="navbar-end">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}"
+            class="navbar-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,31 @@
+<footer class="site-footer footer" role="contentinfo">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-thirds content">
+        <a href="{{ .Site.BaseURL }}" class="has-text-dark">
+          <h1>Artemis</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic totam consectetur animi dolor
+            laudantium eius asperiores voluptatem, harum iure iusto alias. Distinctio est, aut unde eius corrupti
+            aliquam
+            saepe.</p>
+        </a>
+      </div>
+      <div class="column">
+        <aside class="menu">
+          <ul class="menu-list">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}"
+                class="{{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column has-text-centered">
+        Artemis &copy; {{ now.Format "2006"}} Edy de Leon
+      </div>
+    </div>
+  </div>
+</footer>
