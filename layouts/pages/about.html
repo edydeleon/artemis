@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-size-1">
+        This is the {{ .Name }} Page
+      </h1>
+      <h2 class="subtitle is-size-3">
+        layouts/pages/{{ lower .Name }}.html
+      </h2>
+    </div>
+  </div>
+</section>
+
+{{ end }}

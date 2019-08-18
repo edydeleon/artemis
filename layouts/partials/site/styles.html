@@ -1,0 +1,22 @@
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/bulmaswatch/journal/bulmaswatch.min.css"
+/>
+
+{{ if eq hugo.Environment "development" }}
+
+{{ $options := (dict "outputStyle" "expanded" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/styles.scss" | toCSS $options }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+{{ end }}
+
+{{ if eq hugo.Environment "production" }}
+
+{{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+{{ $style := resources.Get "sass/styles.scss" | toCSS $options | resources.PostCSS (dict "config" "postcss.config.js") | fingerprint "md5" }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+{{ end }}

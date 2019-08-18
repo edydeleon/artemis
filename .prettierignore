@@ -1,0 +1,6 @@
+node_modules
+
+layouts/_default/baseof.html
+layouts/partials/site/header.html
+layouts/partials/site/footer.html
+layouts/partials/site/meta.html
