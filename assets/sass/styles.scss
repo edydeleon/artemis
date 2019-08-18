@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.masthead {
+  background-image: url('/img/moonrise.jpg');
+  background-size: cover;
+  .hero-body {
+    background-color: rgba($color: #000000, $alpha: .25);
+  }
+}
+
+.feature {
+  text-align: center;
+}
+
+.is-rounded {
+  border-radius: 50%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

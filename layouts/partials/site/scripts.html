@@ -1,0 +1,15 @@
+{{ if eq hugo.Environment "development" }}
+
+{{ $script := resources.Get "js/scripts.js" }}
+
+<script src="{{ $script.Permalink }}"></script>
+
+{{ end }}
+
+{{ if eq hugo.Environment "production" }}
+
+{{ $script := resources.Get "js/scripts.js" | minify | fingerprint }}
+
+<script src="{{ $script.Permalink }}"></script>
+
+{{ end }}
