@@ -15,7 +15,7 @@ const {
 
 /**
  * PATHS OBJECT
- * 
+ *
  * Contains all the relevant paths for gulp tasks
  */
 const paths = {
@@ -27,12 +27,12 @@ const paths = {
 
 /**
  * IMAGES TASK
- * 
+ *
  * Uses imagemin to optimize images
  */
 
-function images() {
-  return src(paths.images.src)
+function images(done) {
+  src(paths.images.src)
     .pipe(imagemin([
       imagemin.gifsicle({
         interlaced: true
@@ -56,6 +56,7 @@ function images() {
       verbose: true
     }))
     .pipe(dest(paths.images.src));
+    done();
 }
 
 exports.images = images;

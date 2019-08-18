@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "budparr.language-hugo-vscode",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ]
+}

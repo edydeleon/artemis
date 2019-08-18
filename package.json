@@ -1,16 +1,16 @@
 {
-  "name": "artemis-v2",
+  "name": "artemis",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Hugo Boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "hugo server -D -F -e development",
     "preview": "hugo server -e production",
-    "build": "npm run images && hugo --gc --minify -e production",
+    "build": "hugo --gc --minify -e production",
     "build:preview": " hugo --gc -e production",
     "images": "gulp images"
   },
-  "author": "",
+  "author": "Edy de Leon",
   "license": "MIT",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",

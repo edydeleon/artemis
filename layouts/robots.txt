@@ -1,0 +1,7 @@
+User-agent: *
+
+{{ if eq hugo.Environment "development" }}
+  {{range .Pages}}
+    Disallow: {{.RelPermalink}}
+  {{end}}
+{{ end }}

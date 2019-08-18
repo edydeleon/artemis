@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang='{{ .Site.LanguageCode | default "en" }}'>
 
 <head>
 
@@ -30,6 +30,10 @@
   {{ block "scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
 
   {{ block "page-scripts" . }}{{ end }}
+
+  {{ if eq hugo.Environment "production" }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
 
 </body>
 
