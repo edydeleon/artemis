@@ -2,6 +2,7 @@
   "name": "artemis",
   "version": "1.0.0",
   "description": "A Hugo Boilerplate",
+  "homepage": "https://github.com/edydeleon/artemis#readme",
   "main": "index.js",
   "scripts": {
     "start": "hugo server -D -F -e development",
